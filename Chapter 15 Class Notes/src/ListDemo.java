@@ -9,7 +9,23 @@ public class ListDemo
 {
    public static void main(String[] args)
    {
+       /*
+        the add last method of LinkedList can be used to populate a list
+        */
+       LinkedList<String> staff = new LinkedList<>();
+       staff.addLast("Diana");
+       staff.addLast("Harry");
+       staff.addLast("Romeo");
+       staff.addLast("Tom");
 
+       // List is currently D,H,R,T
+
+       /*
+            The listIterator method creates a new iterator method that is positioned
+            at the front of the list
+            The "|" in the comment indicates the iterator position
+        */
+       ListIterator<String> iterator = staff.listIterator();  //|DHRT
 
       // | in the comments indicates the iterator position
 
