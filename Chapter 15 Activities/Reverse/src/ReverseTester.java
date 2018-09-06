@@ -1,5 +1,3 @@
-package Reverse;
-
 import java.util.LinkedList;
 
 /**

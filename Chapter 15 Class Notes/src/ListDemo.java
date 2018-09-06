@@ -25,20 +25,32 @@ public class ListDemo
             at the front of the list
             The "|" in the comment indicates the iterator position
         */
-       ListIterator<String> iterator = staff.listIterator();  //|DHRT
+       ListIterator<String> iterator = staff.listIterator(); //|DHRT
 
-      // | in the comments indicates the iterator position
+       /*
+            the next method advances the iterator over the next element in the list
+        */
+       iterator.next(); //D|HRT
 
-					// |DHRT
-       				// D|HRT
-      				// DH|RT
+       /*
+            the next method also returns the element that the iterator is passing
+        */
+       String name = iterator.next();
+       System.out.print(name);
+       System.out.print("Expected: Harry");
 
-      // Add more elements after second element
+       /*
+            the add method inserts an element at the iterator position
+                the iterator is then positioned after the added element
+        */
+       iterator.add("Juliet"); //DHJ|RT
+       iterator.add("Nina"); //DHJN|RT
 
-      				// DHJ|RT
-      				// DHJN|RT
-
-      				// DHJNR|T
+       /*
+            the remove method removes the element returned by the last call to
+                next or previous
+            the remove method can only be called once after calling next
+            */
 
       // Remove last traversed element
 
@@ -46,7 +58,32 @@ public class ListDemo
 
       // Print all elements
 
-      //System.out.println(staff);
+      System.out.println(staff);
       System.out.println("Expected: [Diana, Harry, Juliet, Nina, Tom]");
+
+      // set method sets the element returned by the last call to next or previous
+
+       /*
+            the hasNext method is often used in the context of a while loop
+        */
+       iterator = staff.listIterator();
+       while(iterator.hasNext())
+       {
+           String n = iterator.next();
+           if(n.equals("Juliet"))
+           {
+               iterator.remove();
+           }
+       }
+
+       /*
+            enhanced for loops work with linked lists because they implement
+                the List interface
+        */
+       for(String n:staff)
+       {
+           System.out.println(n + "");
+       }
+       System.out.println();
    }
 }
