@@ -3,6 +3,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Iterator;
 
 /**
    This program checks which words in a file are not present in a dictionary.
@@ -13,18 +14,36 @@ public class SpellCheck
       throws FileNotFoundException
    {
       // Read the dictionary and the document
+       Set<String> dictionaryWords = readWords("src/words");
+       Set<String> documentWords = readWords("src/alice30.txt");
+
 
 
 
       // Print all words that are in the document but not the dictionary
 
-      //for (String word : documentWords)
+      for (String word : documentWords)
       {
-         //if ( )
+         if (!dictionaryWords.contains(word))
          {
-            //System.out.println(word);
+            System.out.println(word);
          }
       }
+      System.out.println("unique words: " + documentWords.size());
+      /*
+            Print the number of unique words in the document with more
+                than three letters.
+       */
+      Iterator<String> i = documentWords.iterator();
+      while(i.hasNext())
+      {
+          if(i.next().length() < 4)
+          {
+              i.remove();
+          }
+      }
+      System.out.println(documentWords.size());
+
    }
 
    /**
@@ -36,11 +55,28 @@ public class SpellCheck
    public static Set<String> readWords(String filename)
       throws FileNotFoundException
    {
+      /*
+          The implementation of a Set doesnt matter; so store
+          the reference in a variable of type set    */
+      Set<String> words = new HashSet<>();
+      Scanner in = new Scanner(new File(filename));
+
+      // use any character other that a-z or A-Z as delimiters
+       in.useDelimiter("[^a-zA-Z]+");
+
+       while(in.hasNext())
+       {
+          /*
+               adding duplicates to a set is ignored
+                  (so is removing elements that dont exist)
+           */
+          words.add(in.next().toLowerCase());
+       }
 
 
 
 
 
-      return null;
+      return words;
    }
 }
