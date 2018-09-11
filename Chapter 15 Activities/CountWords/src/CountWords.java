@@ -1,7 +1,7 @@
-package CountWords;
-
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeSet;
 /**
    Write a program that reads text from a file and breaks
@@ -12,15 +12,15 @@ import java.util.TreeSet;
 */
 public class CountWords
 {
-   public static void main(String[] args)
-   {
-      String fileName = "test1.txt";
+   public static void main(String[] args) throws FileNotFoundException {
+      String fileName = "src/test3.txt";
 
       try (Scanner in = new Scanner(new File(fileName)))
       {
 
          // Create your TreeSet here
-         . . .
+         Set<String> words = new TreeSet<>();
+
 
          int numWords = 0;
          while (in.hasNext())
@@ -28,15 +28,18 @@ public class CountWords
             String word = clean(in.next());
             numWords++;
             // Add the word to the set here
-            . . .
+            words.add(word);
 
          }
 
          // Print the words
-         . . .
+         for(String singleWord : words)
+         {
+            System.out.println(singleWord);
+         }
          System.out.println("Number of words: " + numWords);
          // Print the size of the resulting set
-         . . .
+         System.out.println("Size of resulting set: " + words.size());
 
       }
       catch (FileNotFoundException e)
