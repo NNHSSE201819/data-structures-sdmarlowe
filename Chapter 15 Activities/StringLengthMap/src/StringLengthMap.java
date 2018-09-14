@@ -1,5 +1,3 @@
-package StringLengthMap;
-
 import java.util.*;
 import java.io.*;
 /**
@@ -20,7 +18,7 @@ public class StringLengthMap
       {
 
          // Create your map here
-         . . .
+
 
          while (in.hasNext())
          {

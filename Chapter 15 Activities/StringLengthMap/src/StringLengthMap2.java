@@ -1,5 +1,3 @@
-package StringLengthMap;
-
 import java.util.*;
 import java.io.*;
 /**
@@ -20,8 +18,7 @@ public class StringLengthMap2
       {
 
          // Create your map here
-         . . .
-
+         Map<Integer, String> words = new HashMap<>();
          while (in.hasNext())
          {
             String word = clean(in.next());
@@ -29,7 +26,6 @@ public class StringLengthMap2
 
             // Update the map here
             // Modify Worked Example 15.1
-            . . .
 
 
          }
