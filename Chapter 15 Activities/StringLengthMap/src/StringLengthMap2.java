@@ -18,7 +18,7 @@ public class StringLengthMap2
       {
 
          // Create your map here
-         Map<Integer, String> words = new HashMap<>();
+         Map<Integer, String> words = new TreeMap<>();
          while (in.hasNext())
          {
             String word = clean(in.next());

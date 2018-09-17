@@ -1,5 +1,3 @@
-package SentenceReverser;
-
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -16,7 +14,12 @@ public class SentenceReverser
    public static String reverse(String sentence)
    {
       // Complete this method. Use a Stack.
-      ...
+      Stack<String> cool = new Stack<>();
+      Scanner s = new Scanner(sentence);
+      while(s.hasNext())
+      {
+
+      }
 
 
 

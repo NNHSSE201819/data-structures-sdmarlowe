@@ -1,5 +1,3 @@
-package SentenceReverser;
-
 public class ReverseTester
 {
    public static void main(String[] args)
