@@ -1,6 +1,4 @@
-package IntegerSplitter;
 
-//HIDE
 public class IntegerSplitterTester
 {
    public static void main(String[] args)

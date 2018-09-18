@@ -1,5 +1,3 @@
-package IntegerSplitter;
-
 import java.util.Scanner;
 public class IntegerSplitterDemo
 {

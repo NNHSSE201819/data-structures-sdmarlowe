@@ -1,5 +1,3 @@
-package IntegerSplitter;
-
 import java.util.Scanner;
 import java.util.Stack;
 /**
@@ -15,12 +13,16 @@ public class IntegerSplitter
    public static void split(int number)
    {
       // Complete this method. Use a Stack
-      ...
-
-
-
-
-
-
+      Stack<Integer> cool = new Stack<>();
+      while(number > 9)
+      {
+         cool.push(number % 10);
+         number = number / 10;
+      }
+      cool.push(number);
+      while(!cool.empty())
+      {
+         System.out.println(cool.pop());
+      }
    }
 }

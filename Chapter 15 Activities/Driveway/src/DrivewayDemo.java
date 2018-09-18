@@ -1,5 +1,3 @@
-package Driveway;
-
 import java.util.Scanner;
 
 public class DrivewayDemo

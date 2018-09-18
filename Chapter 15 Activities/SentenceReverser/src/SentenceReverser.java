@@ -18,13 +18,14 @@ public class SentenceReverser
       Scanner s = new Scanner(sentence);
       while(s.hasNext())
       {
-
+         cool.push(s.next());
       }
-
-
-
-
-
-
+      String newSentence = "";
+      int size = cool.size();
+      for(int i = 0; i <  size;i++)
+      {
+         newSentence += cool.pop() + " ";
+      }
+      return newSentence;
    }
 }
