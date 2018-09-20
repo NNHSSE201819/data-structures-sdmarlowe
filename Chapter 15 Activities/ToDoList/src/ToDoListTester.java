@@ -1,5 +1,3 @@
-package ToDoList;
-
 //HIDE
 public class ToDoListTester
 {

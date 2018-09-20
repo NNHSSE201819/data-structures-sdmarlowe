@@ -1,5 +1,3 @@
-package ToDoList;
-
 /**
    Class for creating a priority To Do list.
 */
