@@ -1,5 +1,3 @@
-package FloodFill;
-
 public class Grid
 {
    private static final int SIZE = 10;

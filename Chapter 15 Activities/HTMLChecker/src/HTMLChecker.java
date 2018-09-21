@@ -1,5 +1,3 @@
-package HTMLChecker;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -19,12 +17,30 @@ public class HTMLChecker
 {
    public static void main(String[] args)
    {
-      String filename = "TagSample1.html";
+      String filename = "src/TagSample2.html";
 
       try (Scanner in = new Scanner(new File(filename)))
       {
          // Your code goes here
-         . . .
+         Stack<String> tags = new Stack<>();
+         boolean proper = true;
+         while(in.hasNext())
+         {
+            String next = in.next();
+            if(!next.contains("/"))
+            {
+               tags.push(next);
+            }
+            else
+            {
+               String top = tags.pop();
+               if(!(top.equals(next.substring(0,1)+next.substring(2))))
+               {
+                  proper = false;
+               }
+            }
+            System.out.println("The order is proper: " + proper);
+         }
 
 
 

@@ -64,10 +64,11 @@ public class ToDoList
    {
       // Complete this method
       Scanner s = new Scanner(optionStr);
+      s.next();
       if(s.hasNextInt())
       {
          int priority = s.nextInt();
-         String description = optionStr.substring(1);
+         String description = optionStr.substring(6);
          this.list.add(new Task(priority,description));
       }
       else

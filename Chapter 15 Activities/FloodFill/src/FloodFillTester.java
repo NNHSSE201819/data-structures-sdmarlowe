@@ -1,5 +1,3 @@
-package FloodFill;
-
 public class FloodFillTester
 {
    public static void main(String[] args)
