@@ -7,8 +7,10 @@ public class ListDemo
    {
 	  //create LinkedList and add to it
       LinkedList staff = new LinkedList();
-
-
+      staff.addFirst("Tom");
+      staff.addFirst("Romeo");
+      staff.addFirst("Harry");
+      staff.addFirst("Diana");
       // | in the comments indicates the iterator position
 
 
