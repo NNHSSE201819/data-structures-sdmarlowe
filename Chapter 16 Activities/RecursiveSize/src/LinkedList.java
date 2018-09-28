@@ -1,5 +1,3 @@
-package RecursiveSize;
-
 import java.util.NoSuchElementException;
 
 /**
@@ -28,9 +26,21 @@ public class LinkedList
    */
    public int size()
    {
-      . . .
+      return this.size(this.first);
    }
 
+   private int size(Node start)
+   {
+      // add recursive algorithm here
+      if(start == null)
+      {
+         return 0;
+      }
+      else
+      {
+         return this.size(start.next) + 1;
+      }
+   }
 
    /**
       Returns the first element in the linked list.
@@ -72,9 +82,9 @@ public class LinkedList
       Returns an iterator for iterating through this list.
       @return an iterator for iterating through this list
    */
-   public ListIterator listIterator()
+   public RecursiveSize.ListIterator listIterator()
    {
-      return new LinkedListIterator();
+      return (RecursiveSize.ListIterator) new LinkedListIterator();
    }
 
    private class Node
@@ -83,7 +93,7 @@ public class LinkedList
       public Node next;
    }
 
-   private class LinkedListIterator implements ListIterator
+   private class LinkedListIterator implements RecursiveSize.ListIterator
    {
       private Node position;
       private Node previous;

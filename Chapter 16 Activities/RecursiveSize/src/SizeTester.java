@@ -1,5 +1,3 @@
-package RecursiveSize;
-
 /**
    A tester program for a revised version of the LinkedList class.
 */
@@ -13,7 +11,7 @@ public class SizeTester
       names.addFirst("Harry");
       names.addFirst("Dick");
 
-      ListIterator iterator = names.listIterator();
+      RecursiveSize.ListIterator iterator = names.listIterator();
       iterator.next();
       iterator.next();
       iterator.remove();

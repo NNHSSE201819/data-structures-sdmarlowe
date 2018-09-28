@@ -1,5 +1,3 @@
-package Size;
-
 import java.util.NoSuchElementException;
 
 /**
@@ -26,7 +24,18 @@ public class LinkedList
    */
    public int size()
    {
-      . . .
+      if(this.first == null)
+      {
+         return 0;
+      }
+      int i = 0;
+      Node n = this.first;
+      while(n.next != null)
+      {
+         i++;
+         n = n.next;
+      }
+      return i;
    }
 
    /**
@@ -69,9 +78,9 @@ public class LinkedList
       Returns an iterator for iterating through this list.
       @return an iterator for iterating through this list
    */
-   public ListIterator listIterator()
+   public Size.ListIterator listIterator()
    {
-      return new LinkedListIterator();
+      return (Size.ListIterator) new LinkedListIterator();
    }
 
    private class Node
@@ -80,7 +89,7 @@ public class LinkedList
       public Node next;
    }
 
-   private class LinkedListIterator implements ListIterator
+   private class LinkedListIterator implements Size.ListIterator
    {
       private Node position;
       private Node previous;
