@@ -1,5 +1,3 @@
-package Contains;
-
 /**
    A tester program for the get and set functions of the LinkedList class.
 */

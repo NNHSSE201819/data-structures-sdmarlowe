@@ -1,5 +1,3 @@
-package Contains;
-
 import java.util.NoSuchElementException;
 
 /**
@@ -43,7 +41,24 @@ public class LinkedList
    */
    public boolean contains(Object obj)
    {
-      // ...
+      Node currentNode = new Node();
+      currentNode = first;
+      if(first == null)
+      {
+         return false;
+      }
+      else
+      {
+         for(int i = 0; i < currentSize; i++)
+         {
+            if(currentNode.data.equals(obj))
+            {
+               return true;
+            }
+            currentNode = currentNode.next;
+         }
+      }
+      return false;
    }
 
    /**

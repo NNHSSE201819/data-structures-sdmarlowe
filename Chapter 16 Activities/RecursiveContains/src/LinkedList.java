@@ -1,5 +1,3 @@
-package RecursiveContains;
-
 import java.util.NoSuchElementException;
 
 /**
@@ -43,7 +41,7 @@ public class LinkedList
    */
    public boolean contains(Object obj)
    {
-      // ...
+      return(contains(first,obj));
    }
 
    /**
@@ -53,7 +51,19 @@ public class LinkedList
    */
    public static boolean contains(Node start, Object obj)
    {
-      // ...
+      boolean b = false;
+      if(start == null)
+      {
+         return b;
+      }
+      else
+      {
+         if(start.data.equals(obj))
+         {
+            return true;
+         }
+         return contains(start.next,obj);
+      }
    }
 
    /**

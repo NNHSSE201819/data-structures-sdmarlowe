@@ -1,5 +1,3 @@
-package Reverse;
-
 /**
    A test program to reverse the entries in a linked list.
 */
