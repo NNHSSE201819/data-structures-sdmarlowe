@@ -3,10 +3,15 @@ public class StackDemo
    public static void main(String[] args)
    {
       LinkedListStack s = new LinkedListStack();
-      //.push()
+      s.push("Tom");
+      s.push("Diana");
+      s.push("Harry");
 
 
-	  //while !empty .pop()
-
+	  while (!s.empty())
+      {
+         System.out.println(s.pop());
+      }
+      System.out.println("Expected: Harry, Diana, Tom");
    }
 }
