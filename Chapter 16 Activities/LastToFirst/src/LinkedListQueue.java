@@ -1,5 +1,3 @@
-package LastToFirst;
-
 /**
    Add a method lastToFirst to this implementation of a queue.
    The method moves the element at the tail of the queue
@@ -24,12 +22,23 @@ public class LinkedListQueue
    */
    public void lastToFirst()
    {
-      . . .
-
-
-
-
-
+      Node current = this.head;
+      Node newLast = new Node();
+      boolean found = false;
+      while(!found)
+      {
+         if(current.next.next == null)
+         {
+            newLast = current;
+            found = true;
+         }
+         current = current.next;
+      }
+      Node newNode = this.tail;
+      newNode.next = this.head;
+      this.head = newNode;
+      newLast.next = null;
+      this.tail = newLast;
    }
 
    /**

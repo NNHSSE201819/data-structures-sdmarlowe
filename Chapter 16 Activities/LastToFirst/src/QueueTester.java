@@ -1,5 +1,3 @@
-package LastToFirst;
-
 /**
    Testing the LinkedListQueue.lastToFirst() method.
 */

@@ -39,12 +39,17 @@
       <file leaf-file-name="CircularArrayQueue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CircularArrayQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-              <folding>
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="767">
+              <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueueDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/QueueDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -54,12 +59,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/QueueDemo.java" />
         <option value="$PROJECT_DIR$/src/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/ListDemo.java" />
         <option value="$PROJECT_DIR$/src/LinkedListStack.java" />
         <option value="$PROJECT_DIR$/src/StackDemo.java" />
         <option value="$PROJECT_DIR$/src/CircularArrayQueue.java" />
+        <option value="$PROJECT_DIR$/src/QueueDemo.java" />
       </list>
     </option>
   </component>
@@ -80,6 +85,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -97,7 +103,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Course" />
       <pane id="AndroidView" />
     </panes>
@@ -105,7 +110,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chapter 16 Activities/RecursiveContains" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chapter 16 Activities/LastToFirst" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -120,9 +125,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StackDemo">
+  <component name="RunManager" selected="Application.QueueDemo">
     <configuration name="ListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ListDemo" />
+      <module name="Ch16ClassNotes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="QueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QueueDemo" />
       <module name="Ch16ClassNotes" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -175,9 +185,11 @@
     <list>
       <item itemvalue="Application.ListDemo" />
       <item itemvalue="Application.StackDemo" />
+      <item itemvalue="Application.QueueDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.QueueDemo" />
         <item itemvalue="Application.StackDemo" />
         <item itemvalue="Application.ListDemo" />
       </list>
@@ -209,12 +221,12 @@
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32937366" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32857144" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32857144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -240,6 +252,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/CircularArrayQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/QueueDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -355,13 +374,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rename.iml" />
-    <entry file="file://$PROJECT_DIR$/src/QueueDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ListDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -398,14 +410,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/QueueDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CircularArrayQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-          <folding>
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="767">
+          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
         </state>
       </provider>
     </entry>
