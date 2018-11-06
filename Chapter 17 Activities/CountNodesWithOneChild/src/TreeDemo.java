@@ -1,5 +1,3 @@
-package CountNodesWithOneChild;
-
 /**
    This class demonstrates the tree class.
 */

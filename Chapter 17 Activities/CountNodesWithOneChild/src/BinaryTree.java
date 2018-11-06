@@ -1,5 +1,3 @@
-package CountNodesWithOneChild;
-
 //HIDE
 /**
    A binary tree in which each node has two children.
@@ -103,5 +101,44 @@ public class BinaryTree
       BinaryTree result = new BinaryTree();
       result.root = root.right;
       return result;
+   }
+
+   public int countNodesWithOneChild()
+   {
+      return BinaryTree.countNodesWithOneChild(this.root);
+   }
+
+   public static int countNodesWithOneChild(Node n)
+   {
+      if(n == null)
+      {
+         return 0;
+      }
+      else
+      {
+         if(n.left == null && n.right != null || n.right == null && n.left != null)
+         {
+            if(n.left == null && n.right != null)
+            {
+               return 1 + countNodesWithOneChild(n.left);
+            }
+            else
+            {
+               return 1 + countNodesWithOneChild(n.right);
+            }
+         }
+         else
+         {
+            if(n.left != null)
+            {
+               return countNodesWithOneChild(n.left);
+            }
+            else if(n.right != null)
+            {
+               return countNodesWithOneChild(n.right);
+            }
+         }
+      }
+      return 0;
    }
 }
