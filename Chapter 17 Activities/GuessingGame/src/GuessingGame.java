@@ -66,7 +66,7 @@ public class GuessingGame
                BinaryTree newRight = new BinaryTree(name);
                BinaryTree newCurrent = new BinaryTree(condition,newLeft,newRight);
                done = true;
-               String message = "Great, " + newCurrent.data();
+               String message = "Great, It's a " + newRight.data();
                System.out.println(message);
             }
          }
