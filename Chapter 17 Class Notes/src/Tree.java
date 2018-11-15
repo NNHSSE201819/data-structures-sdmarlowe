@@ -68,5 +68,42 @@ public class Tree
       return this.root.size();
    }
 
-   // Additional methods will be added in later sections.
+   /*
+      A visitor whose visit method is called for each visited Node
+         during a tree traversal
+    */
+   public interface Visitor
+   {
+      /*
+         this method is called for each node visited
+       */
+      void visit(Object data);
+   }
+
+   /**
+    * Traverses this tree in pre-order.
+    * @param v the visitor to be invoked at each node
+    */
+   public void preorder(Visitor v)
+   {
+      Tree.preorder(this.root,v);
+   }
+
+   /**
+    * Traverses the tree with a given root in preorder
+    * @param n the root of the tree
+    * @param v the visitor to be invoked at each node
+    */
+   private static void preorder(Node n,Visitor v)
+   {
+      if(n == null)
+      {
+         return;
+      }
+      v.visit(n.data);
+      for(Node c : n.children)
+      {
+         Tree.preorder(c,v);
+      }
+   }
 }

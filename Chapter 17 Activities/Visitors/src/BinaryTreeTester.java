@@ -1,5 +1,3 @@
-package Visitors;
-
 import java.util.Scanner;
 
 public class BinaryTreeTester

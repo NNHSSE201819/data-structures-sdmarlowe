@@ -1,5 +1,3 @@
-package Visitors;
-
 /**
    An interface for visiting objects.
 */

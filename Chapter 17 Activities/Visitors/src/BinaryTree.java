@@ -1,5 +1,3 @@
-package Visitors;
-
 /**
    Add methods
       void preorder(Visitor v)
@@ -99,4 +97,6 @@ public class BinaryTree
       result.root = root.right;
       return result;
    }
+
+   public void
 }
