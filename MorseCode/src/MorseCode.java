@@ -11,7 +11,7 @@ public class MorseCode
     private static TreeMap<Character, String> codeMap;
     private static TreeNode decodeTree;
 
-    public static void printDecodeTree()
+    public static void main()
     {
         MorseCode.start();  
         BTreePrinter.printNode(decodeTree);
@@ -70,8 +70,8 @@ public class MorseCode
      */
     private static void addSymbol(char letter, String code)
     {
-        _______________________________________
-        ...
+        codeMap.put(letter,code);
+        treeInsert(letter,code);
     }
 
     /**
@@ -83,8 +83,26 @@ public class MorseCode
      */
     private static void treeInsert(char letter, String code)
     {
-        _______________________________________
-        ...
+        int length = code.length();
+        TreeNode newNode = new TreeNode(letter);
+
+        for(int i = 0; i < length; i++)
+        {
+            if(code.charAt(i) == DASH)
+            {
+                if(decodeTree.getRight() == null)
+                {
+                    TreeNode newRight = new TreeNode(" ");
+                    decodeTree.setRight(newRight);
+                    newNode = newRight;
+                }
+                newNode = decodeTree.getRight();
+            }
+            else
+            {
+
+            }
+        }
     }
 
     /**
@@ -97,8 +115,6 @@ public class MorseCode
     {
         StringBuffer morse = new StringBuffer(400);
 
-        _______________________________________
-        ...
 
         return morse.toString();
     }
