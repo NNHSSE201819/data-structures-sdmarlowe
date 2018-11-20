@@ -85,32 +85,38 @@ public class MorseCode
     {
         int length = code.length();
         TreeNode newNode = new TreeNode(letter);
+        TreeNode currentNode = decodeTree;
 
         for(int i = 0; i < length; i++)
         {
             if(code.charAt(i) == DASH)
             {
-                if(decodeTree.getRight() == null)
+                if(currentNode.getRight() == null)
                 {
-                    decodeTree.setRight(newNode);
+                    TreeNode blankNode = new TreeNode(" ");
+                    currentNode.setRight(blankNode);
+                    currentNode = blankNode;
                 }
                 else
                 {
-                    newNode = decodeTree.getRight();
+                    currentNode = currentNode.getRight();
                 }
             }
             else if(code.charAt(i) == DOT)
             {
-                if(decodeTree.getLeft() == null)
+                if(currentNode.getLeft() == null)
                 {
-                    decodeTree.setLeft(newNode);
+                    TreeNode blankNode = new TreeNode(" ");
+                    currentNode.setLeft(blankNode);
+                    currentNode = blankNode;
                 }
                 else
                 {
-                    newNode = decodeTree.getLeft();
+                    currentNode = currentNode.getLeft();
                 }
             }
         }
+        currentNode.setValue(letter);
     }
 
     /**
@@ -122,7 +128,10 @@ public class MorseCode
     public static String encode(String text)
     {
         StringBuffer morse = new StringBuffer(400);
-
+        for(int i = 0; i < text.length()-1; i++)
+        {
+            morse.append(codeMap.get(text.charAt(i)));
+        }
 
         return morse.toString();
     }
@@ -136,6 +145,9 @@ public class MorseCode
     public static String decode(String morse)
     {
         StringBuffer text = new StringBuffer(100);
+
+        TreeNode currentNode = decodeTree;
+        for(int i )
 
         return text.toString();
     }
