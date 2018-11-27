@@ -149,17 +149,18 @@ public class MorseCode
         TreeNode currentNode = decodeTree;
         for(int i = 0; i <= morse.length()-1; i++)
         {
-            if(currentNode == DOT)
-            {
-                currentNode = currentNode.getRight();
-            }
-            else if(currentNode == DASH)
+            if(morse.charAt(i) == DOT)
             {
                 currentNode = currentNode.getLeft();
             }
+            else if(morse.charAt(i) == DASH)
+            {
+                currentNode = currentNode.getRight();
+            }
             else
             {
-                text.append(currentNode.data);
+                text.append(currentNode.getValue());
+                currentNode = decodeTree;
             }
         }
 
