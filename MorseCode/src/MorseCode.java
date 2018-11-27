@@ -147,7 +147,21 @@ public class MorseCode
         StringBuffer text = new StringBuffer(100);
 
         TreeNode currentNode = decodeTree;
-        for(int i )
+        for(int i = 0; i <= morse.length()-1; i++)
+        {
+            if(currentNode == DOT)
+            {
+                currentNode = currentNode.getRight();
+            }
+            else if(currentNode == DASH)
+            {
+                currentNode = currentNode.getLeft();
+            }
+            else
+            {
+                text.append(currentNode.data);
+            }
+        }
 
         return text.toString();
     }
