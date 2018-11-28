@@ -13,7 +13,7 @@ public class MorseCode
 
     public static void main(String[] args)
     {
-        MorseCode.start();  
+        MorseCode.start();
         BTreePrinter.printNode(decodeTree);
     }
 
@@ -128,9 +128,18 @@ public class MorseCode
     public static String encode(String text)
     {
         StringBuffer morse = new StringBuffer(400);
-        for(int i = 0; i < text.length()-1; i++)
+        ArrayList<String> words = new ArrayList<String>();
+        for(int i = 0; i < text.length(); i++)
         {
-            morse.append(codeMap.get(text.charAt(i)));
+            Character index = text.charAt(i);
+            if(index.toString().equals(" "))
+            {
+                morse.append(index);
+            }
+            else
+            {
+                morse.append(codeMap.get(text.charAt(i)) + " ");
+            }
         }
 
         return morse.toString();
@@ -244,7 +253,7 @@ class BTreePrinter {
         if (node == null)
             return 0;
 
-        return Math.max(BTreePrinter.maxLevel(node.getLeft()), 
+        return Math.max(BTreePrinter.maxLevel(node.getLeft()),
             BTreePrinter.maxLevel(node.getRight())) + 1;
     }
 
